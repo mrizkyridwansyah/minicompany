@@ -110,4 +110,4 @@ app.use("/api/question", questionRoutes);
 app.use("/api/option", optionRoutes);
 app.use("/api/test", onlineTestRoutes);
 
-app.listen(1000, () => console.log("HRIS running on port 1000"));
+app.listen(process.env.PORT || 5000, () => console.log("HRIS running"));
