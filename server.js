@@ -94,12 +94,12 @@ app.use("/api/activity", activityRoutes);
 app.use("/api/approval", approvalRoutes);
 
 //Login
-app.use("/api/role", auth, roleRoutes);
-app.use("/api/app", auth, appRoutes);
-app.use("/api/user", auth, userRoutes);
-app.use("/api/user", auth, userRoutes);
-app.use("/api/access", auth, accessRoutes);
-app.use("/api/menu", auth, menuRoutes);
+app.use("/api/role", roleRoutes);
+app.use("/api/app", appRoutes);
+app.use("/api/user", userRoutes);
+app.use("/api/user", userRoutes);
+app.use("/api/access", accessRoutes);
+app.use("/api/menu", menuRoutes);
 app.use("/api/auth", router);
 
 //Reqruitment
@@ -110,4 +110,4 @@ app.use("/api/question", questionRoutes);
 app.use("/api/option", optionRoutes);
 app.use("/api/test", onlineTestRoutes);
 
-app.listen(process.env.PORT || 5000, () => console.log("HRIS running"));
+app.listen(process.env.PORT || 1000, () => console.log("HRIS running"));
