@@ -25,22 +25,12 @@ const db = mongoose.connection;
 db.on("error", (err) => console.log(err.message));
 db.on("open", () => console.log("Connected to mongoose"));
 
-//Setup CORS
-// var whitelist = ["http://localhost:2100", "http://localhost:3000"];
-// var corsOptions = {
-//   origin: function (origin, callback) {
-//     if (whitelist.indexOf(origin) !== -1 || !origin) {
-//       callback(null, true);
-//     } else {
-//       callback(new Error("Not allowed by CORS"));
-//     }
-//   },
-// };
-
-// app.use(cors(corsOptions));
 app.use(function (req, res, next) {
   // Website you wish to allow to connect
-  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "https://minicompany.netlify.app"
+  );
 
   // Request methods you wish to allow
   res.setHeader(
